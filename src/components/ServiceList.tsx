@@ -1,17 +1,26 @@
 import "./ServiceList.css";
 import ServiceCard from "./ServiceCard";
 import { services } from "../data/services";
+import type { Service } from "../types/service";
 
-export default function ServiceList() {
+interface ServiceListProps {
+  selectedServices: Service[];
+  onToggleService: (service: Service) => void;
+}
+
+export default function ServiceList({
+  selectedServices,
+  onToggleService,
+}: ServiceListProps) {
   return (
     <div className="service-list">
       <div className="service-list__services-container">
         {services.map((service) => (
           <ServiceCard
             key={service.id}
-            title={service.title}
-            price={service.price}
-            illustration={service.illustration}
+            service={service}
+            isAdded={selectedServices.some((s) => s.id === service.id)}
+            onToggle={() => onToggleService(service)}
           />
         ))}
       </div>
