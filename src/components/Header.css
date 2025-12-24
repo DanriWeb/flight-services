@@ -1,1 +1,26 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  width: 100%;
+}
+
+.header-title {
+  color: #243551;
+
+  font-family: "Coolvetica";
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 20px 0 20px 0;
+  }
+
+  .header-title {
+    font-size: 30px;
+  }
+}
