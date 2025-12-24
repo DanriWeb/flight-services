@@ -21,6 +21,11 @@
   height: auto;
 }
 
+/* Отключение transition при изменении размера окна */
+.button.no-transition {
+  transition: none !important;
+}
+
 /* Размеры */
 .button--small-mobile {
   padding: 4px 8px;

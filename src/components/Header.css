@@ -7,6 +7,8 @@
 }
 
 .header-title {
+  padding: 20px 0;
+
   color: #243551;
 
   font-family: "Coolvetica";
@@ -16,11 +18,19 @@
 }
 
 @media (max-width: 480px) {
-  .header {
-    padding: 20px 0;
-  }
-
   .header-title {
     font-size: 30px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .header-title {
+    font-size: 45px;
+  }
+}
+
+@media (min-width: 769px) {
+  .header-title {
+    font-size: 60px;
   }
 }

@@ -16,6 +16,11 @@
   color: #243551;
 }
 
+.service-card__illustration {
+  width: 100%;
+  height: auto;
+}
+
 .service-card__service-title {
   font-family: Coolvetica;
   font-weight: 400;
@@ -44,16 +49,55 @@
     gap: 10px;
   }
 
-  .service-card__illustration {
-    width: 100%;
-    height: auto;
-  }
-
   .service-card__service-title {
     font-size: 17px;
   }
 
   .service-card__service-price {
     font-size: 15px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .service-card {
+    min-width: 300px;
+    max-width: 400px;
+    gap: 30px;
+  }
+
+  .service-card__information-container,
+  .service-card__illustration-container,
+  .service-card__description-container {
+    gap: 15px;
+  }
+
+  .service-card__service-title {
+    font-size: 26px;
+  }
+
+  .service-card__service-price {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 769px) {
+  .service-card {
+    min-width: 400px;
+    max-width: 600px;
+    gap: 35px;
+  }
+
+  .service-card__information-container,
+  .service-card__illustration-container,
+  .service-card__description-container {
+    gap: 20px;
+  }
+
+  .service-card__service-title {
+    font-size: 34px;
+  }
+
+  .service-card__service-price {
+    font-size: 30px;
   }
 }
