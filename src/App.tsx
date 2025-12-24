@@ -7,9 +7,11 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <main className="main">
-        <div className="title-container">
-          <h2 className="title"></h2>
+      <main className="app__main">
+        <div className="app__main-title-container">
+          <h2 className="app__main-title">
+            Выберите услуги для комфортного полёта
+          </h2>
         </div>
         <ServiceList />
         <Cart />
