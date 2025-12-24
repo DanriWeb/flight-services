@@ -1,7 +1,9 @@
+import "./Header.css";
+
 export default function Header() {
   return (
-    <header>
-      <h1>MVP Flight Services</h1>
+    <header className="header">
+      <h1 className="header-title">MVP Flight Services</h1>
     </header>
   );
 }
