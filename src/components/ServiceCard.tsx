@@ -20,14 +20,18 @@ export default function ServiceCard({
     <div className="service-card">
       <div className="service-card__information-container">
         <div className="service-card__illustration-container">
-          <img src={illustration} alt="" />
+          <img
+            src={illustration}
+            alt=""
+            className="service-card__illustration"
+          />
         </div>
         <div className="service-card__description-container">
           <h3 className="service-card__service-title">{title}</h3>
           <p className="service-card__service-price">${price}</p>
         </div>
       </div>
-      <Button size="medium" isAdded={isAdded} onClick={handleAddClick} />
+      <Button size="small-mobile" isAdded={isAdded} onClick={handleAddClick} />
     </div>
   );
 }
