@@ -32,6 +32,7 @@
     "utils",
     "tests",
     "components",
-    "assets"
+    "assets",
+    "types"
   ]
 }
