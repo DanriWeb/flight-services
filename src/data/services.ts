@@ -7,19 +7,19 @@ export const services: Service[] = [
   {
     id: "extra-baggage",
     title: "Багаж сверх нормы",
-    price: 30,
+    price: 2355,
     illustration: extraBaggage,
   },
   {
     id: "seat-selection",
     title: "Выбор места у окна",
-    price: 10,
+    price: 785,
     illustration: seatSelection,
   },
   {
     id: "inflight-meal",
     title: "Питание на борту",
-    price: 15,
+    price: 1180,
     illustration: inflightMeal,
   },
 ];
