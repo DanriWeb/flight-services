@@ -1,1 +1,155 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 20px 10px 40px 10px;
+
+  background-color: white;
+
+  border-radius: 10px;
+}
+
+.cart__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  gap: 10px;
+}
+
+.cart__summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  gap: 20px;
+}
+
+.cart__summary > button {
+  background-color: #444f60;
+  color: #d3d3d3;
+}
+
+.cart__total-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: auto;
+  gap: 10px;
+}
+
+.cart__total-label,
+.cart__total-value {
+  font-family: Coolvetica;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  white-space: nowrap;
+}
+
+.cart__total-label {
+  color: #243551;
+}
+
+.cart__total-value {
+  color: #2e70d7;
+}
+
+@media (max-width: 480px) {
+  .cart {
+    gap: 20px;
+
+    border-top: 4px solid #444f60;
+  }
+
+  .cart__total-label,
+  .cart__total-value {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .cart {
+    gap: 35px;
+
+    border-top: 6px solid #444f60;
+  }
+
+  .cart__total-label,
+  .cart__total-value {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 769px) {
+  .cart {
+    gap: 35px;
+
+    border-top: 6px solid #444f60;
+  }
+
+  .cart__summary {
+    flex-direction: column;
+  }
+
+  .cart__total-label,
+  .cart__total-value {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 890px) {
+  .cart {
+    justify-content: space-between;
+    position: relative;
+    margin-top: 40px;
+    top: 0;
+    right: 0;
+    width: auto;
+    min-width: 400px;
+    min-height: 400px;
+    padding: 20px 10px 20px 25px;
+
+    border-top: 4px solid #444f60;
+    border-left: 4px solid #444f60;
+    border-bottom: 4px solid #444f60;
+    border-top-left-radius: 48px;
+    border-bottom-left-radius: 48px;
+  }
+
+  .cart__wrapper {
+    order: 2;
+  }
+
+  .cart__summary {
+    align-items: start;
+  }
+
+  .cart__service-list {
+    order: 1;
+  }
+
+  .cart__total-price {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  .cart__total-label,
+  .cart__total-value {
+    font-size: 25px;
+  }
+}

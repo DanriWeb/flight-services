@@ -1,0 +1,44 @@
+.cart__service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+}
+
+.cart__service-item__name,
+.cart__service-item__price {
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.cart__service-item__name {
+  color: #475b7c;
+}
+
+.cart__service-item__price {
+  color: #2e70d7;
+}
+
+@media (max-width: 480px) {
+  .cart__service-item__name,
+  .cart__service-item__price {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .cart__service-item__name,
+  .cart__service-item__price {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 769px) {
+  .cart__service-item__name,
+  .cart__service-item__price {
+    font-size: 25px;
+  }
+}

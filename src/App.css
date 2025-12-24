@@ -31,6 +31,15 @@
   text-align: center;
 }
 
+.app__main-services-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100%;
+}
+
 @media (max-width: 480px) {
   .app__main-title {
     font-size: 25px;
