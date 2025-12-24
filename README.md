@@ -17,7 +17,7 @@
 
 ## 📸 Превью приложения
 
-![MVP Flight Services Preview](./.github/images/mvp_flight_services_proto.png)
+![MVP Flight Services Preview](./.github/images/mvp_flight_services_proto.png?v=2)
 
 _Интерфейс выбора дополнительных услуг для авиапассажиров_
 
