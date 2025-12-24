@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./ServiceCard.css";
 import type { Service } from "../types/service";
 import Button from "./Button";
+import type { ButtonProps } from "../types/button";
 
 type ServiceCardProps = Pick<Service, "title" | "illustration" | "price">;
 
@@ -11,6 +12,46 @@ export default function ServiceCard({
   illustration,
 }: ServiceCardProps) {
   const [isAdded, setIsAdded] = useState(false);
+  const [buttonSize, setButtonSize] =
+    useState<ButtonProps["size"]>("small-mobile");
+
+  useEffect(() => {
+    // Обновление размера кнопки при изменении размера окна
+    const updateButtonSize = () => {
+      const width = window.innerWidth;
+      let newSize: ButtonProps["size"];
+
+      if (width <= 480) {
+        newSize = "small-mobile";
+      } else if (width <= 768) {
+        newSize = "medium-tablet";
+      } else {
+        newSize = "medium-desktop";
+      }
+
+      // Отключить transition на всех кнопках
+      const buttons = document.querySelectorAll(".button");
+      buttons.forEach((btn) => btn.classList.add("no-transition"));
+
+      setButtonSize(newSize);
+
+      // Включить transition обратно после изменения
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          buttons.forEach((btn) => btn.classList.remove("no-transition"));
+        }, 50);
+      });
+    };
+
+    // Установить размер при монтировании
+    updateButtonSize();
+
+    // Слушать изменения размера окна
+    window.addEventListener("resize", updateButtonSize);
+
+    // Очистка при размонтировании
+    return () => window.removeEventListener("resize", updateButtonSize);
+  }, []);
 
   const handleAddClick = () => {
     setIsAdded(!isAdded);
@@ -31,7 +72,7 @@ export default function ServiceCard({
           <p className="service-card__service-price">${price}</p>
         </div>
       </div>
-      <Button size="small-mobile" isAdded={isAdded} onClick={handleAddClick} />
+      <Button size={buttonSize} isAdded={isAdded} onClick={handleAddClick} />
     </div>
   );
 }
