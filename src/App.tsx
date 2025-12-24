@@ -9,9 +9,7 @@ function App() {
       <Header />
       <main className="main">
         <div className="title-container">
-          <h2 className="title">
-            Сервис дополнительных услуг для авиапассажиров
-          </h2>
+          <h2 className="title"></h2>
         </div>
         <ServiceList />
         <Cart />
