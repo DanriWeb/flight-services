@@ -31,16 +31,9 @@
 }
 
 @media (min-width: 1024px) {
-  .service-list {
-    margin-right: 300px;
-  }
 }
 
 @media (min-width: 1440px) {
-  .service-list {
-    margin-right: 400px;
-  }
-
   .service-list__services-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

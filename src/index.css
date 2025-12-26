@@ -36,11 +36,16 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   width: 100%;
   min-width: 300px;
   overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  width: 100%;
+  min-width: 300px;
   min-height: 100vh;
 }
 
