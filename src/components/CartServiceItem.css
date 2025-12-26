@@ -9,6 +9,7 @@
 .cart__service-item__name,
 .cart__service-item__price {
   font-family: Inter;
+  font-size: 15px;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 0.02em;
@@ -22,21 +23,14 @@
   color: #2e70d7;
 }
 
-@media (max-width: 480px) {
-  .cart__service-item__name,
-  .cart__service-item__price {
-    font-size: 15px;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 480px) {
   .cart__service-item__name,
   .cart__service-item__price {
     font-size: 22px;
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .cart__service-item__name,
   .cart__service-item__price {
     font-size: 25px;
