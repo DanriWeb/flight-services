@@ -10,9 +10,9 @@ export function useButtonSize(): ButtonProps["size"] {
       const width = window.innerWidth;
       let newSize: ButtonProps["size"];
 
-      if (width <= 480) {
+      if (width < 768) {
         newSize = "small-mobile";
-      } else if (width <= 768) {
+      } else if (width < 1440) {
         newSize = "medium-tablet";
       } else {
         newSize = "medium-desktop";

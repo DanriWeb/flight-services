@@ -19,16 +19,18 @@ export default function Cart({ selectedServices }: CartProps) {
     <div className="cart">
       <div className="cart__wrapper">
         <div className="cart__summary">
+          <div className="cart__button-container">
+            <Button
+              size={buttonSize}
+              isAdded={false}
+              onClick={() => console.log("Оформление заказа.")}
+              customLabel="Оформить заказ"
+            />
+          </div>
           <div className="cart__total-price">
             <div className="cart__total-label">Итого к оплате:</div>
             <div className="cart__total-value">{totalPrice}₽</div>
           </div>
-          <Button
-            size={buttonSize}
-            isAdded={false}
-            onClick={() => console.log("Оформление заказа.")}
-            customLabel="Оформить заказ"
-          />
         </div>
       </div>
       <CartServiceList services={selectedServices} />
