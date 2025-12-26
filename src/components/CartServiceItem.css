@@ -23,14 +23,18 @@
   color: #2e70d7;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .cart__service-item__name,
   .cart__service-item__price {
     font-size: 22px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
+  .cart__service-item {
+    gap: 10px;
+  }
+
   .cart__service-item__name,
   .cart__service-item__price {
     font-size: 25px;

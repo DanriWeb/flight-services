@@ -1,11 +1,12 @@
 .cart {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   position: fixed;
   width: 100%;
+  min-width: 300px;
   bottom: 0;
   padding: 20px 10px 40px 10px;
   gap: 20px;
@@ -36,9 +37,24 @@
   gap: 20px;
 }
 
-.cart__summary > button {
+.cart__button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+}
+
+.cart__button-container > button {
   background-color: #444f60;
   color: #d3d3d3;
+}
+
+.cart__button-container > .button--small-mobile {
+  min-width: 110px;
+  max-width: 50%;
+  padding: 6px 12px;
 }
 
 .cart__total-price {
@@ -70,11 +86,15 @@
   color: #2e70d7;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .cart {
     gap: 35px;
 
     border-top: 6px solid #444f60;
+  }
+
+  .cart__button-container > .button--medium-tablet {
+    max-width: 70%;
   }
 
   .cart__total-label,
@@ -83,40 +103,18 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .cart {
-    gap: 35px;
-
-    border-top: 6px solid #444f60;
-  }
-
-  .cart__summary {
-    flex-direction: column;
-  }
-
-  .cart__total-label,
-  .cart__total-value {
-    font-size: 32px;
-  }
-}
-
-@media (min-width: 890px) {
-  .cart {
-    justify-content: space-between;
-    position: relative;
+    justify-content: flex-start;
+    position: fixed;
     margin-top: 40px;
     top: 0;
     right: 0;
-    width: auto;
-    min-width: 400px;
-    min-height: 400px;
+    width: 300px;
+    height: auto;
     padding: 20px 10px 20px 25px;
 
-    border-top: 4px solid #444f60;
-    border-left: 4px solid #444f60;
-    border-bottom: 4px solid #444f60;
-    border-top-left-radius: 48px;
-    border-bottom-left-radius: 48px;
+    border: none;
   }
 
   .cart__wrapper {
@@ -124,7 +122,12 @@
   }
 
   .cart__summary {
+    flex-direction: column;
     align-items: start;
+  }
+
+  .cart__button-container > .button--medium-tablet {
+    max-width: none;
   }
 
   .cart__service-list {
@@ -136,10 +139,20 @@
     justify-content: space-between;
 
     width: 100%;
+    order: -1;
+    gap: 10px;
   }
 
   .cart__total-label,
   .cart__total-value {
-    font-size: 25px;
+    font-size: 29px;
+    white-space: wrap;
+  }
+}
+
+@media (min-width: 1440px) {
+  .cart {
+    width: 400px;
+    padding: 20px 10px 20px 25px;
   }
 }

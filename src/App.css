@@ -1,3 +1,8 @@
+.app {
+  max-width: 1800px;
+  min-width: 300px;
+}
+
 .app__main {
   display: flex;
   flex-direction: column;
@@ -15,7 +20,6 @@
   align-items: center;
 
   width: 100%;
-  max-width: 1200px;
 
   padding: 0px 20px 0 20px;
 }
@@ -41,13 +45,36 @@
   width: 100%;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
+  .app {
+    padding: 0 20px;
+  }
+
   .app__main-title {
     font-size: 35px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+  .app {
+    padding: 0 20px;
+  }
+
+  .app__main-services-container {
+    /* Создаём новый containing block для position: fixed элементов */
+    transform: translateZ(0);
+  }
+
+  .app__main-title {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .app {
+    padding: 0 40px;
+  }
+
   .app__main-title {
     font-size: 45px;
   }

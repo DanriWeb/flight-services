@@ -19,7 +19,7 @@
   gap: 40px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .service-list {
     padding-top: 60px;
     padding-bottom: 250px;
@@ -30,13 +30,21 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
   .service-list {
-    padding-left: 40px;
-    padding-bottom: 310px;
+    margin-right: 300px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .service-list {
+    margin-right: 400px;
   }
 
   .service-list__services-container {
-    gap: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 45px;
   }
 }

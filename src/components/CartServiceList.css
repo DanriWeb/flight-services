@@ -16,7 +16,7 @@
   text-align: center;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .cart__service-list {
     gap: 20px;
   }
@@ -26,18 +26,12 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .cart__service-list {
     gap: 20px;
   }
 
   .cart__service-list--empty {
     font-size: 25px;
-  }
-}
-
-@media (min-width: 890px) {
-  .cart__service-list--empty {
-    margin-top: 80px;
   }
 }
